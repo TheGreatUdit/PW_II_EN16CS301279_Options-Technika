@@ -1,0 +1,59 @@
+{% extends "OptionsTechnikaApp/base.html" %}
+{% load static %}
+{% block head_title %}Add Alumini | Options Technika{% endblock head_title %}
+{% block css-add %}
+<link href="{% static 'css/register.css' %}" rel="stylesheet" />
+{% endblock css-add %}
+    {% block content %}
+  <section id="inner-headline">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-9">
+        <h1 class="pageTitle">Add Alumni</h1>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div>
+  </section>
+<div class="container-fluid">
+<div class="container">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+    <form action="", method="post">
+            {% csrf_token %}
+            <div class="row">
+          <div class="col-md-12">
+          	<input type="text" name="al_name" placeholder="Full Name">
+          </div>
+          </div>
+          <div class="row">
+        <div class="col-md-12">
+          <input type="email" name="email" placeholder="Email ID">
+        </div>
+        </div>
+        <div class="row">
+      <div class="col-md-12">
+        <input type="text" name="company" placeholder="Company">
+      </div>
+      </div>
+      <div class="row">
+    <div class="col-md-12">
+      <input type="text" name="age" placeholder="Age">
+    </div>
+    </div>
+    <div class="row">
+  <div class="col-md-12">
+    <input type="text" name="salary" placeholder="Salary">
+  </div>
+  </div>
+      <div class="row">
+    <div class="col-md-4"></div>
+  <div class="col-md-4"><input class="btn btn-lg btn-success submit-button" type="submit" value="SUBMIT"></div>
+   </div>
+
+</form>
+  </div>
+</div>
+</div></div>
+{% endblock content%}

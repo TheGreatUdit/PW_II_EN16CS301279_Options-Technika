@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block head_title %}Options Technika{% endblock head_title %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="http://webthemez.com" />
+    <!-- css -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/jcarousel.css' %}" rel="stylesheet" /> -->
+    <link href="{% static 'css/flexslider.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <style>
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 9px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #838383;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #a3a3a3}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #000000;
+}
+</style>
+    {% block css-add %}{% endblock css-add %}
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- start header -->
+	    <header>
+        <div class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <!-- <img src="{% static 'img/logo.png' %}" alt="logo"/> --><span style="color:#838383;">Options</span><span style="color:white;">Technika</span>
+              </a>
+            </div>
+            <div class="navbar-collapse collapse ">
+              <ul class="nav navbar-nav">
+                <li class="{% if nbar == 'index' %}active{% endif %}"><a href="/">Home</a></li>
+						    <li class="{% if nbar == 'courses' %}active{% endif %}"><a href="/courses">Courses Offered</a></li>
+                <li class="dropdown {% if nbar == 'about' %}active{% endif %}">
+                <button class="dropbtn"><a href="/about" style="color:white"><b>ABOUT US</b></a></button>
+                <div class="dropdown-content">
+                <a href="/team">OUR TEAM</a>
+                <a href="/walloffame">ALUMINI</a>
+                </div>
+                </li>
+                <li class="{% if nbar == 'contact' %}active{% endif %}"><a href="/contact">Contact Us</a></li>
+                <li class="{% if nbar == 'enquiry' %}active{% endif %}"><a href="/enquiry">Enquiry</a></li>
+
+                <li class="{% if nbar == 'login' %}active{% endif %}"><a href="/login">Login</a></li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+	    </header>
+      {% block content %}{% endblock content %}
+      <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Our Contact</h5>
+            <address>
+            <strong>4th Floor, Tulsi Tower</strong><br>
+            Geeta Bhawan Square AB road
+            <br>opp. BRTS Bus stop,Indore, Madhya pradesh
+             </address>
+            <p>
+              <i class="icon-phone"></i><a href=”tel:+918889977226″>+918889977226</a>
+              <i class="icon-envelope-alt"></i>
+              <br>Email
+              <br><a href="mailto:indoreaptechlearning@gmail.com subject=subject text"> indoreaptechlearning@gmail.com </a>
+              <br><a href="mailto:ibmice7@gmail.com subject=subject text"> ibmice7@gmail.com </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Quick Links</h5>
+            <ul class="link-list">
+              <li><a href="/courses">Courses Offered</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/team">Our Team</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/enquiry">Enquiry</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Latest posts</h5>
+            <ul class="link-list">
+              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+              <li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
+              <li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="widget">
+            <h5 class="widgetheading">Recent News</h5>
+            <ul class="link-list">
+              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+              <li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
+              <li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+          </div>
+          <div class="col-lg-6">
+            <ul class="social-network">
+              <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a> -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+<script src="{% static 'js/portfolio/jquery.quicksand.js' %}"></script>
+<script src="{% static 'js/portfolio/setting.js' %}"></script>
+<script src="{% static 'js/jquery.flexslider.js' %}"></script>
+<script src="{% static 'js/animate.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<!-- <script src="{% static 'js/owl-carousel/owl.carousel.js' %}"></script> -->
+</body>
+</html>

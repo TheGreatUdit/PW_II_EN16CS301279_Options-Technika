@@ -1,0 +1,25 @@
+{% extends "OptionsTechnikaApp/base.html" %}
+{% load static %}
+{% block head_title %}Register | Options Technika{% endblock head_title %}
+{% block css-add %}
+<link href="{% static 'css/register.css' %}" rel="stylesheet" />
+{% endblock css-add %}
+    {% block content %}
+  <section id="inner-headline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-9">
+        <h1 class="pageTitle">Register Page</h1>
+      </div>
+    </div>
+  </div>
+  </section>
+<div class="container-fluid">
+<div class="container">
+
+<button type="submit" action="/opencam/{{username}}" class="btn btn-info">Click Me!</button>
+</div>
+</div>
+</div>
+{% endblock content%}

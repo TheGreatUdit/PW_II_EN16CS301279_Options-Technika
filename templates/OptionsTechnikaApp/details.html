@@ -1,0 +1,212 @@
+{% extends "OptionsTechnikaApp/base.html" %}
+{% load static %}
+{% block head_title %}Course Details{% endblock head_title %}
+{% block css-add %}<link href="{% static 'css/style4.css' %}" rel="stylesheet" />{% endblock css-add %}
+{% block content %}
+
+<!-- <html lang="en">
+  <head>
+    Required meta tags
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Courses Details</title> -->
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}" />
+    main css
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}" />
+  </head> -->
+
+  <!-- <body style="background-color: #fff"> -->
+    <!--=====
+    <!--================ End Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <br><br><br><br>
+            <div class="col-lg-12">
+              <div class="banner_content text-center">
+                <h2>Full-Stack Web Development</h2>
+                <div class="page_link">
+                  <a href="/">Home</a>
+                  <a href="/courses">Courses</a>
+                  <a href="/details">Courses Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================ Start Course Details Area =================-->
+    <section class="course_details_area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 course_details_left">
+                    <div class="main_image">
+                        <img class="img-fluid" src="{% static 'img/courses/course-details.jpg' %}" alt="">
+                    </div>
+                    <div class="content_wrapper">
+                        <h4 class="title">Objectives</h4>
+                        <div class="content">
+                            When you enter into any new area of science, you almost always find yourself with a
+                            baffling new language of
+                            technical terms to learn before you can converse with the experts. This is certainly
+                            true in astronomy both in
+                            terms of terms that refer to the cosmos and terms that describe the tools of the trade,
+                            the most prevalent
+                            being the telescope.
+                            <br>
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea
+                            commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum.
+                        </div>
+
+                        <h4 class="title">Eligibility</h4>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+                            <br>
+                            <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea
+                            commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum.
+                        </div>
+
+                        <h4 class="title">Course Outline</h4>
+                        <div class="content">
+                            <ul class="course_list">
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 1: Introduction Lesson</p>
+                                    <!-- <a class="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 2: Basics of HTML</p>
+                                    <!-- <p class="primary-btn text-uppercase">View Details</p> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 3: Getting Know about HTML</p>
+                                    <!-- <alass="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 4: Tags and Attributes</p>
+                                    <!-- <a class="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 5: Basics of CSS</p>
+                                    <!-- <a class="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 6: Getting Familiar with CSS</p>
+                                    <!-- <a class="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 7: Introduction to Bootstrap</p>
+                                    <!-- <a class="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 8: Responsive Design</p>
+                                    <!-- <a 8lass="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+                                <li class="justify-content-between d-flex">
+                                    <p>MODULE 9: Canvas in HTML 5</p>
+                                    <!-- <a class="primary-btn text-uppercase" href="#">View Details</a> -->
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 right-contents">
+                    <ul>
+                        <li>
+                            <a class="justify-content-between d-flex" href="#">
+                                <p>Trainer’s Name</p>
+                                <span class="or">Nitesh Karmakar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" href="#">
+                                <p>Course Duration </p>
+                                <span>6 Months</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" href="#">
+                                <p>Available Seats </p>
+                                <span>15</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" href="#">
+                                <p>Schedule </p>
+                                <span>2.00 pm to 4.00 pm</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/enquiry" class="primary-btn2 text-uppercase enroll rounded-0 text-white">Enroll the course</a>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Course Details Area =================-->
+
+          <!--================ End footer Area  =================-->
+
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <!-- <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+          <script src="{% static 'js/popper.js' %}"></script>
+          <script src="{% static 'js/bootstrap.min.js' %}"></script>
+          <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+          <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+          <script src="{% static 'js/owl-carousel-thumb.min.js' %}"></script>
+          <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+          <script src="{% static 'js/mail-script.js' %}"></script>
+          gmaps Js
+          <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE' %}"></script>
+          <script src="{% static 'js/gmaps.min.js' %}"></script>
+          <script src="{% static 'js/theme.js' %}"></script> -->
+        <!-- </body> -->
+      <!-- </html> -->
+
+
+{% endblock content %}

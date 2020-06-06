@@ -1,0 +1,23 @@
+.container-fluid
+{
+	background-color: #000000;
+}
+.panel-body
+{
+	background-color: #bdbdbd;
+}
+#font5
+{
+    font-size:150%;
+    color:#000000;
+}
+#font6
+{
+    font-size:110;
+    color:#606060;
+}
+#aply
+{
+	margin:25px;
+	width: 70%;
+}

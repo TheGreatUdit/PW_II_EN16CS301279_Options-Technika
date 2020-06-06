@@ -1,0 +1,229 @@
+{% extends "OptionsTechnikaApp/base.html" %}
+{% load static %}
+{% block head_title %}Register | Options Technika{% endblock head_title %}
+{% block css-add %}
+<link href="{% static 'css/register.css' %}" rel="stylesheet" />
+{% endblock css-add %}
+    {% block content %}
+  <section id="inner-headline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-9">
+        <h1 class="pageTitle">Registration</h1>
+      </div>
+    </div>
+  </div>
+  </section>
+<div class="container-fluid">
+<div class="container">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+    <form action="", method="post">
+            {% csrf_token %}
+  <div id="accordion">
+    <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Personal Details</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+
+        	<div class="row">
+        <div class="col-md-12">
+        	<input type="text" name="fullname" placeholder="Full Name">
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12"><input type="text" name="username" placeholder="Username"></div>
+        </div>
+ <div class="row">
+  <div class="col-md-6"><input type="date" name="dob" placeholder="Date Of Birth" ></div>
+  <div class="col-md-6"><input list="gender" name="gender" placeholder="Gender"></div>
+  <datalist id="gender">
+    <option value="Male">
+    <option value="Female">
+    <option value="Other">
+  </datalist>
+  </div>
+  <div class="row">
+  <div class="col-md-12"><input type="text" name="address" placeholder="Address" ></div>
+  </div>
+      <div class="row">
+  <div class="col-md-6"><input list="city" name="city" placeholder="City"></div>
+  <datalist id="city">
+    <option value="Indore">
+    <option value="Pune">
+    <option value="Mumbai">
+      <option value="Delhi">
+      <option value="Banglore">
+  </datalist>
+  <div class="col-md-6"><input list="state" name="state" placeholder="State"></div>
+  <datalist id="state">
+    <option value="Madhya Pradesh">
+    <option value="Maharashtra">
+    <option value="Tamil Nadu">
+  </datalist>
+  </div>
+    </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Contact Details</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+        	<div class="row">
+  <div class="col-md-12"><input type="text" name="pno"  placeholder="Your Phone Number Is..."></div>
+
+  </div>
+        	<div class="row">
+    <div class="col-md-12">
+  	<input type="email" name="email"  placeholder="Your Email is..."></div>
+  </div>
+   <div class="row">
+  <div class="col-md-6"><input type="password" name="password1"  placeholder="Your Password Is..."></div>
+  <div class="col-md-6"><input type="password" name="password2"  placeholder="Confirm Password Here..."></div>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Higher Secondary Education</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+        	      <div class="row">
+  <div class="col-md-6"><input type="text" name="inst_name_10" placeholder="Institution Name" ></div>
+  <div class="col-md-6"><input type="text" name="cgpa_10" placeholder="CGPA" ></div>
+  </div>
+      <div class="row">
+  <div class="col-md-6"><input type="text" name="board_10" placeholder="Board" ></div>
+  <div class="col-md-6"><input type="text" name="major_10" placeholder="Major" ></div>
+  </div>
+    <div class="row">
+  <div class="col-md-6"><input type="date" name="start_date_10" placeholder="Start Date" ></div>
+  <div class="col-md-6"><input type="date" name="end_date_10" placeholder="End Date" ></div>
+    </div>
+        </div>
+      </div>
+    </div>
+        <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Senior Secondary Education</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+        	          <div class="row">
+  <div class="col-md-6"><input type="text" name="inst_name_12" placeholder="Institution Name" ></div>
+  <div class="col-md-6"><input type="text" name="cgpa_12" placeholder="CGPA" ></div>
+  </div>
+      <div class="row">
+  <div class="col-md-6"><input type="text" name="board_12" placeholder="Board" ></div>
+  <div class="col-md-6"><input type="text" name="major_12" placeholder="Major" ></div>
+  </div>
+    <div class="row">
+  <div class="col-md-6"><input type="date" name="start_date_12" placeholder="Start Date" ></div>
+  <div class="col-md-6"><input type="date" name="end_date_12" placeholder="End Date" ></div>
+    </div>
+        </div>
+      </div>
+    </div>
+        <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">College Details</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">
+        	          <div class="row">
+  <div class="col-md-6"><input type="text" name="inst_name_clg" placeholder="Institution Name" ></div>
+  <div class="col-md-6"><input type="text" name="cgpa_clg" placeholder="CGPA" ></div>
+  </div>
+      <div class="row">
+  <div class="col-md-6"><input type="text" name="uni_clg" placeholder="University" ></div>
+  <div class="col-md-6"><input type="text" name="major_clg" placeholder="Major" ></div>
+  </div>
+    <div class="row">
+  <div class="col-md-6"><input type="date" name="start_date_clg" placeholder="Start Date" ></div>
+  <div class="col-md-6"><input type="date" name="end_date_clg" placeholder="End Date" ></div>
+    </div>
+        </div>
+      </div>
+    </div>
+        <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Family Details</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+        	    <div class="row">
+  <div class="col-md-6"><input type="text" name="fath_name" placeholder="Father's Name" ></div>
+  <div class="col-md-6"><input type="number" name="fath_age" placeholder="Father's Age" ></div>
+  </div>
+    <div class="row">
+  <div class="col-md-6"><input type="text" name="fath_occ" placeholder="Father's Occupation" ></div>
+  <div class="col-md-6"><input type="text" name="fath_qua" placeholder="Father's Qualification" ></div>
+  </div>
+    <div class="row">
+  <div class="col-md-6"><input type="text" name="moth_name" placeholder="Mother's Name" ></div>
+  <div class="col-md-6"><input type="number" name="moth_age" placeholder="Mother's Age" ></div>
+  </div>
+    <div class="row">
+  <div class="col-md-6"><input type="text" name="moth_occ" placeholder="Mother's Occupation" ></div>
+  <div class="col-md-6"><input type="text" name="moth_qua" placeholder="Mother's Qualification" ></div>
+  </div>
+        </div>
+      </div>
+    </div>
+            <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Extra Details</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">
+        	<div class="row">
+  <div class="col-md-6"><input list="company" name="company" placeholder="Company"></div>
+  <datalist id="company">
+    <option value="IBM">
+    <option value="Aptech">
+    <option value="Aptech Aviations">
+    <option value="MAAC">
+  </datalist>
+
+  <div class="col-md-6"><input list="course" name="course" placeholder="Select a Course"></div>
+  <datalist id="course">
+    <option value="Machine Learning">
+    <option value="Data Science">
+    <option value="IOT">
+  </datalist>
+  </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+    <div class="col-md-4"></div>
+  <div class="col-md-4"><input class="btn btn-lg btn-success submit-button" type="submit" value="SUBMIT"></div>
+   </div>
+
+</div>
+</form>
+  </div>
+</div>
+</div></div>
+{% endblock content%}

@@ -1,0 +1,25 @@
+{% extends "OptionsTechnikaApp/base.html" %}
+{% load static %}
+{% block head_title %}Login | Options Technika{% endblock head_title %}
+{% block css-add %}
+<link href="{% static 'css/login.css' %}" rel="stylesheet" />
+{% endblock css-add %}
+{% block content %}
+<section id="inner-headline"></section>
+<div class="container-fluid">
+    <br><br>
+    <form action=" " method="post">
+      {% csrf_token %}
+  <center><div class="login-box">
+            <h1>Login</h1>
+            <div class="textbox">
+                <!-- <i class="glyphicon glyphicon-user"></i> -->
+                <input type="text" placeholder="Username" name="user" value="" >
+            </div>
+            <div class="textbox">
+                <!-- <i class="glyphicon glyphicon-lock"></i> -->
+                <input type="password" placeholder="Password" name="pass1" value="">
+            </div>
+            <input class="btn" type="submit" name="" value="Sign In">
+        </div><span style="font-size:20px; color:red;">{{msg}}</span></center></form></div><br><br><br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,195 @@
+{% extends "OptionsTechnikaApp/base.html" %}
+{% load static %}
+{% block head_title %}Enquiry | Options Technika{% endblock head_title %}
+{% block css-add %}<link href="{% static 'css/style5.css' %}" rel="stylesheet" />
+{% endblock css-add %}
+{% block content %}
+<section id="inner-headline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-9">
+        <h1 class="pageTitle">Enquiry Page</h1>
+      </div>
+    </div>
+  </div>
+  </section>
+<form method="post">
+  {% csrf_token %}
+  <div class="col-lg-12 mt">
+           <div class="row content-panel">
+             <div class="panel-heading">
+  <ul class="nav nav-tabs nav-justified " role="tablist" style="background-color:BDBDBD">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">Basic Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Additional Information</a>
+    </li>
+  </ul>
+  </div>
+  <!-- Tab panes -->
+  <div class="tab-content" style="width:98%">
+    <div id="home" class="container tab-pane active"><br>
+      <h3><center>Basic Details<center></h3>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Brand</div>
+          <label class="radio-container">MAAC &nbsp;
+              <input type="radio" checked="checked" name="brand">
+              <span class="checkmark"></span>
+          </label>
+          <label class="radio-container"> IBM &nbsp;
+              <input type="radio" name="brand">
+              <span class="checkmark"></span>
+          </label>
+            <label class="radio-container"> Aptech &nbsp;
+              <input type="radio" name="brand">
+              <span class="checkmark"></span>
+          </label>
+          <label class="radio-container">  Aviation &nbsp;
+              <input type="radio" name="brand">
+              <span class="checkmark"></span>
+          </label>
+          <label class="radio-container">  Computer Education &nbsp;
+              <input type="radio" name="brand">
+              <span class="checkmark"></span>
+          </label>
+        </div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">First Name</div>
+        <div class="col-md-2"><input type="text" name="fname" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Last Name</div>
+        <div class="col-md-2"><input type="text" name="lname" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Mobile Number</div>
+        <div class="col-md-2"><input type="text" name="mobile" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Telephone Number</div>
+        <div class="col-md-2"><input type="text" name="tele" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Email</div>
+        <div class="col-md-2"><input type="text" name="email" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Source of Enquiry</div>
+        <div class="col-md-2"><input type="text" name="source" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Campaign</div>
+        <div class="col-md-2"><input type="text" name="campaign" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Comments</div>
+        <div class="col-md-2"><input type="text" name="comments" size="50" required></div>
+        </div>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3><center>Additional Information<center></h3>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">DOB</div>
+        <div class="col-md-2"><input type="date" name="dob" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Gender</div>
+
+
+        <label class="radio-container">Male &nbsp;
+            <input type="radio" checked="checked" name="gender">
+            <span class="checkmark"></span>
+        </label>
+        <label class="radio-container">Female &nbsp;
+            <input type="radio" name="gender">
+            <span class="checkmark"></span>
+        </label>
+        	<label class="radio-container">Others&nbsp;
+            <input type="radio" name="gender">
+            <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Educational Qualification</div>
+        <div class="col-md-2"><input type="text" name="eduqual" size="50" required></div>
+        </div>
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Country</div>
+        <div class="col-md-2"><input type="text" name="country" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">State</div>
+        <div class="col-md-2"><input type="text" name="state" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">City</div>
+        <div class="col-md-2"><input type="text" name="city" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Permanent Address</div>
+        <div class="col-md-2"><input type="text" name="address" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Pin Code</div>
+        <div class="col-md-2"><input type="text" name="pin" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Guardian's Name</div>
+        <div class="col-md-2"><input type="text" name="gname" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Guardian's Address</div>
+        <div class="col-md-2"><input type="text" name="gaddress" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Guardian's Mobile Number</div>
+        <div class="col-md-2"><input type="text" name="gmobile" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Guardian's Landline Number</div>
+        <div class="col-md-2"><input type="text" name="gtele" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Father's Name</div>
+        <div class="col-md-2"><input type="text" name="fathname" size="50" required></div>
+        </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Mother's Name</div>
+        <div class="col-md-2"><input type="text" name="mothname" size="50" required></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-2"><button type="submit" size="50">Submit</button></div>
+          </div>
+    </div>
+
+</form>
+
+{% endblock content%}
